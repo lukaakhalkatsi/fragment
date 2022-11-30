@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        tools:layout="@layout/dashboard_fragment"
+        android:id="@+id/dashboardFragment2"
+        android:name="com.example.fragment.fragments.DashboardFragment"
+        android:label="DashboardFragment" >
+        <action
+            android:id="@+id/action_dashboardFragment2_to_notificationFragment2"
+            app:destination="@id/notificationFragment2" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/home_fragment"
+        android:id="@+id/homeFragment2"
+        android:name="com.example.fragment.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_dashboardFragment2"
+            app:destination="@id/dashboardFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_notificationFragment2"
+            app:destination="@id/notificationFragment2" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/notifiation_fragment"
+        android:id="@+id/notificationFragment2"
+        android:name="com.example.fragment.fragments.NotificationFragment"
+        android:label="NotificationFragment" >
+        <action
+            android:id="@+id/action_notificationFragment2_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="Hello World" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/settings_fragment"
+        android:id="@+id/settingsFragment"
+        android:name="com.example.fragment.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
